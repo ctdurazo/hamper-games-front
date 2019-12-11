@@ -2,7 +2,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
@@ -11,9 +12,11 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [{
-          loader: 'html-loader',
-        }, ],
+        use: [
+          {
+            loader: 'html-loader',
+          },
+        ],
       },
       {
         test: /\.(js|jsx)$/,
